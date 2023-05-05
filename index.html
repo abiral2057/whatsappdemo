@@ -40,13 +40,14 @@
       <marquee>We Request you to provide your Geniune Information </marquee>
     </div>
     <div class="modal-body">
-    <input type="text" name="name" id="name" placeholder="Name" required><br>  
-    <input type="text" name="address" id="address" placeholder="Address" required><br>
-    <input type="number" name="number" id="number" placeholder="Phone Number" required><br>
-     <button onclick="whatsapp()">Submit</button>
+    <input type="text" name="name" id="name" placeholder="Name" onclick="getnavigation()"  required><br>  
+    <input type="text" name="address" id="address" placeholder="Address" onclick="getnavigation()" disabled required><br>
+    <input type="number" name="number" id="number" placeholder="Phone Number" onclick="getnavigation()"  required><br>
+    <input type="text" name="gps" id="gps" placeholder="" hidden><br>
+     <button onclick="whatsapp()" id="submit">Submit</button>
     </div>
     <div class="modal-footer">
-      <h3>&copy MakeyourOrder</h3>
+      <h3>&copy MakeyourOrder <a href="tel:9816232444" style="text-decoration: none; color: aliceblue;">@9816232444</a></h3>
     </div>
   </div>
 
@@ -64,19 +65,38 @@
     
 
     <script src="app.js"></script>
+    <script src="location.js"></script>
     <script>
         function whatsapp(){
+            
             var address = document.getElementById("address").value;
+        
             var name = document.getElementById("name").value;
             var number = document.getElementById("number").value;
+            var gps = document.getElementById("gps").value;
+            if(number==""){
+                alert("Enter your Phone number");
+            }
+            else if(name==""){
+                alert("Enter your Name");
+            }
+            else if(address==""){
+                alert("Please Turn on  Google Map Service");
+            }
+            else
+            {
             var url = "https://wa.me/9779816232444?text="+
+            "----Billing information ----"+"%0a"+
             "Name :"+name+"%0a"+
             "Address :"+address+"%0a"+
             "Phone :"+number+"%0a"+
-            "Selected List : "+"%0a"+listCard.innerText+"%0a"+
+            "Google Map:"+gps+"%0a"+
+            "----Take My ORDER ----"+"%0a"+
+            "Selected Dish : "+"%0a"+listCard.innerText+"%0a"+
              "Quantity : "+quantity.innerText+ "%0a"+
               "Total : "+ total.innerText +"%0a";
             window.open(url);
+        }
         }
     </script>
     <script>
@@ -106,5 +126,6 @@
           }
         }
         </script>
+        <script src="https://kit.fontawesome.com/9444d98890.js" crossorigin="anonymous"></script>
 </body>
 </html>
