@@ -1,7 +1,6 @@
 body{
     background-color: #E3E7E8;
     font-family: system-ui;
-    width:fit-content;
 }
 .container{
     width: 1000px;
@@ -47,7 +46,7 @@ header .shopping span{
     letter-spacing: 1px;
 }
 .list .item img{
-    width: 20%;
+    width: 90%;
 }
 .list .item .title{
     font-weight: 600;
@@ -65,13 +64,13 @@ header .shopping span{
     position: fixed;
     top:0;
     left: 100%;
-    width: 40%;
+    width: 500px;
     background-color: #453E3B;
     height: 100vh;
     transition: 0.5s;
 }
 .active .card{
-    left: calc(90% - 294px);
+    left: calc(100% - 500px);
 }
 .active .container{
    transform: translateX(-200px);
@@ -119,7 +118,7 @@ header .shopping span{
     align-items: center;
 }
 .listCard li img{
-    width: 30%;
+    width: 90%;
 }
 .listCard li button{
     background-color: #fff5;
