@@ -199,3 +199,21 @@ header .shopping span{
     background-color: #5cb85c;
     color: white;
   }
+  input{
+  border-radius: 10px;
+  width: 40%;
+  height: 40px;
+  margin-top: 12px;
+  padding-left: 20px;
+  
+  }
+  #submit{
+    font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:#f1211a;
+    border-radius: 10px;
+    color: #ffffff;
+  }
+  input::placeholder{
+    
+  }
