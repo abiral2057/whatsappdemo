@@ -85,6 +85,23 @@
             }
             else
             {
+                
+                //whatsapp ko lai
+                 var url = "https://wa.me/9779816232444?text="+
+            "----Billing information ----"+"%0a"+
+            "Name :"+name+"%0a"+
+            "Address :"+address+"%0a"+
+            "Phone :"+number+"%0a"+
+            "Google Map:"+gps+"%0a"+
+            "----Take My ORDER ----"+"%0a"+
+            "Selected Dish : "+"%0a"+listCard.innerText+"%0a"+
+             "Quantity : "+quantity.innerText+ "%0a"+
+              "Total : "+ total.innerText +"%0a";
+            window.open(url);
+
+                
+                
+                //messenger ko lai
             var url = "http://m.me/abiral2000?text="+
             "----Billing information ----"+"%0a"+
             "Name :"+name+"%0a"+
@@ -96,6 +113,7 @@
              "Quantity : "+quantity.innerText+ "%0a"+
               "Total : "+ total.innerText +"%0a";
             window.open(url);
+            
         }
         }
     </script>
